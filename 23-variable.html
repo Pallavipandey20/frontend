@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        /* color system */
+        --red-300: rgb(248, 185, 185);
+        --red-400: rgb(248, 106, 106);
+        --red-500: rgb(252, 18, 18);
+
+        --green-400: rgb(16, 239, 16);
+        --blue-400: rgb(53, 117, 255);
+        /* text system */
+        --ff-bebas: "Bebus Neue", sans-serif;
+        --ff-popping: "Poppins", sans-serif;
+        --ff-heading: var(--ff-bebas);
+        --ff-body: var(--ff-popping);
+
+        -fw-300: 300;
+        -fw-400: 400;
+        -fw-600: 600;
+        -fw-700: 700;
+
+        --fs-300: 0.875rem; /*14px */
+        --fs-400: 1rem; /*16px */
+        --fs-500: 1.5rem; /*24px */
+        --fs-600: 2rem; /*32px */
+        --fs-650: 3rem; /*48px */
+        --fs-700: 4rem; /*64px */
+
+        /* shadow */
+        --shadow-sm: 2px 2px 6px rgba(0, 0, 0, 0.15);
+        --shadow-md: 4px 2px 8px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 6px 6px 10px rgba(0, 0, 0, 0.25);
+
+        .primary-heading {
+          color: var(--red-500);
+        }
+        .btn {
+          box-shadow: var(--shadow-lg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="primary-heading">Variables is CSS</h1>
+    <button class="btn">Click Me</button>
+  </body>
+</html>

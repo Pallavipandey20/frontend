@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+              @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+              /* DESIGN SYSTEM */
+              :root {
+                  /* colors */
+                  --clr-primary:#99e1d9 ;
+                  --clr-Secondary:#fffae3 ;
+                  --clr-accent: #f7567c;
+                  --clr-bg:#fcfcfc ;
+                  --clr-text: #5d576b;
+                  --clr-muted:#8aa0c0 ;
+
+                  /* typography */
+      --ff-primary:"Poppins",sans-serif;
+      --ff-xs :  0.75rem;
+      --ff-sm:  0.875rem;
+      --ff-md:  1rem;
+      --ff-lg :  1.25rem;
+      --ff-xl :  2rem;
+                  /* spacing */
+                  --space-xs: 4px;
+                  --space-sm: 8px;
+                  --space-md: 16px;
+                  --space-lg: 24px;
+                  --space-xl: 40px;
+                  /* layout */
+                  --container-width:1200px;
+                  --radius-sm:6px;
+                  --radius-md:12px;
+
+
+                  *,*::after,*::before{
+                      box-sizing: border-box;
+                  }
+                  body{
+                      margin: 0;
+                      fony-family: var(ff-primary);
+                      background-color: var(--clr-bg);
+                      color: var(--clr-text);
+                      font-size: var(--fs-md);
+                      line-height: 1.6;
+                  }
+                  /* layout system */
+                  .container{
+                      border: 2px solid red;
+                      max-width: var(--container-width);
+                      margin: 0 auto;
+                      padding-left: var(--space-md);
+                  }
+      /* Typography */
+      .heading-xl {
+          font-size:var(--ff-xs);
+          font-weight: 700;
+      }
+      .heading-lg {
+          font-size:var(--ff-xs);
+          font-weight: 700;
+      }
+      .text-muted {
+          color: var(--clr-muted);
+      }
+      .text-center[
+          text-align: center;
+      ]
+              }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <h1 class="heading-lg">System Design</h1>
+        <p></p>
+      </section>
+    </main>
+    <h1>System Design</h1>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .container {
+        background-color: lightgray;
+        border: 1px solid #222;
+
+        display: grid;
+        grid-template-columns: 200px 400px 500px;
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        /* fr: fractional unit */
+
+        grid-template-rows: 100px auto;
+        grid-template-rows: 100px 150px;
+
+        row-gap: 2rem;
+        column-gap: 3rem;
+        gap: 1rem;
+      }
+      .item {
+        background-color: lightsalmon;
+        border: 1px solid #222;
+        padding: 1rem;
+      }
+      .item-2 {
+        /* grid-row: 1/3; */
+        grid-row: span 2;
+      }
+      .item-3 {
+        /* grid-column: 1/3; */
+      }
+
+      .parent {
+        display: grid;
+        grid-template-areas:
+          "navbar navbar navbar"
+          "sidebar main main"
+          "footer footer footer";
+      }
+      .header {
+        grid-area: navbar;
+        padding: 2rem;
+        background-color: lightcyan;
+      }
+      .aside {
+        grid-area: sidebar;
+        padding: 2rem;
+        background-color: lightblue;
+      }
+      .main {
+        grid-area: main;
+        padding: 2rem;
+        background-color: lightgreen;
+      }
+      .footer {
+        grid-area: footer;
+        padding: 2rem;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid in CSS</h1>
+    <!-- <div class="container">
+      <div class="item item-1">Item 1</div>
+      <div class="item item-2">Item 2</div>
+      <div class="item item-3">Item 2</div>
+      <!-- <div class="item item-2">Item 2</div> -->
+    <!-- </div> -->
+    <div class="parent">
+      <header class="header">Header</header>
+      <aside class="aside">Aside</aside>
+      <main class="main">Main</main>
+      <footer class="footer">Footer</footer>
+    </div>
+  </body>
+</html>

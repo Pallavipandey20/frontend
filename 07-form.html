@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Form</h1>
+    <form action="">
+      <div>
+        <label for="one">Name</label>
+        <input type="text" id="one" name="name" required />
+      </div>
+      <div>
+        <label for="email"> Email</label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="example@gmail.com"
+        />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="password" id="pass" name="password" required />
+      </div>
+      <div>
+        <label for="dob">Date of birth</label>
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          main="2022-05-15"
+          max="2030-10-12"
+        />
+      </div>
+      <div>
+        Favorite color
+        <label for="req">Red</label>
+        <input type="checkbox" name="red" id="red" />
+        <label for="green">Green</label>
+        <input type="checkbox" name="green" id="green" />
+        <label for="blue">blue</label>
+        <input type="checkbox" name="blue" id="blue" />
+      </div>
+      <div>
+        Gender?
+        <label for="m">Male</label>
+        <input type="radio" id="m" name="gender" />
+
+        <label for="m">Female</label>
+        <input type="radio" id="f" name="gender" />
+      </div>
+      <div>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" required />
+        <div>
+          <div>
+            <label for="exp">your working Experence</label>
+            <select name="experence" id="exp">
+              <option value="0 to 1">0-1 yr</option>
+              <option value="1 to 2">1-3 yr</option>
+              <option value="3 plus">3 + yr</option>
+            </select>
+          </div>
+          <div>
+            <label for="color">color</label>
+            <input type="color" />
+          </div>
+          <div>
+            <label for="pic">Profile picture</label>
+            <input type="file" />
+          </div>
+          <div>
+            <label for="number">Number</label>
+            <input type="tel" name="number" id="number" />
+          </div>
+
+          <button>Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <h2>Form 2</h2>
+    <form action="">
+      <div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div>
+        favorite color
+        <label for="red">red</label>
+        <input type="checkbox" id="red" name="red" />
+        <label for="green">Green </label>
+        <input type="checkbox" id="green" name="green" />
+
+        <label for="blue"></label>
+        <input type="checkbox" id="blue" name="blue" />
+      </div>
+      <div>
+        Gender?
+        <label for="m">Male</label>
+        <input type="radio" id="m" name="gender" value="male" />
+        <label for="f">Female</label>
+        <input type="radio" id="f" name="gender" value="female" />
+      </div>
+      <button>submit</button>
+    </form>
+  </body>
+</html>

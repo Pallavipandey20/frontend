@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(193, 222, 222);
+        font-family: sans-serif;
+      }
+      .hero-section {
+        max-width: 1080px;
+        margin: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: aliceblue;
+        /* border: 1px solid black; */
+        position: relative;
+      }
+      .navbar {
+        display: flex;
+      }
+      .nav-container {
+        width: 220px;
+        height: 30px;
+        border: 2px solid black;
+        border-radius: 25px;
+        display: flex;
+        gap: 45px;
+        justify-content: end;
+        /* margin: 10px; */
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+      .Study {
+        width: 100px;
+        height: 27px;
+
+        border: 1px solid black;
+        border-radius: 25px;
+        margin: 1px 0px;
+        background-color: rgb(255, 162, 0);
+      }
+      .nav-card {
+        padding-top: 5px;
+        padding-right: 8px;
+      }
+      .container {
+        display: flex;
+        gap: 5%;
+        /* margin-bottom: 20px; */
+        padding-top: 30px;
+        /* position: relative; */
+      }
+      .flashcard-container {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 60%;
+        height: 70vh;
+        /* padding: 10px; */
+        position: relative;
+      }
+
+      .header {
+        display: flex;
+        position: relative;
+      }
+      .left-header {
+        border: 1px solid black;
+        /* width: 35%; */
+        padding: 5px 10px;
+        border-radius: 20px;
+        text-align: center;
+        margin: 10px 20px;
+      }
+      .checkbox {
+        margin-left: 15px;
+        padding: 5px;
+        margin: 10px 20px;
+      }
+      .right-header {
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 5px 20px;
+        /* margin: 10px 10px 10px 100px; */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* margin-left: 100px; */
+      }
+
+      .main-flascard {
+        width: 95%;
+        height: 300px;
+        background-image: linear-gradient(
+          145deg,
+          rgba(218, 17, 185, 0.384),
+          rgb(203, 43, 144)
+        );
+        margin-top: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        /* gap: 3rem; */
+      }
+      .web {
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-top: 20px;
+      }
+      .main-flascard h2 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+      }
+      .main-flascard p {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+      .action {
+        margin: 20px auto;
+        text-align: center;
+      }
+      .know {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 5px 10px;
+        background-color: rgb(239, 185, 60);
+      }
+      .reset {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 5px 10px;
+      }
+      .footer {
+        display: flex;
+        gap: 100px;
+        margin: 10px;
+      }
+      .previos {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 5px 10px;
+      }
+      .next {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 5px 10px;
+      }
+      .footer p {
+        opacity: 0.5;
+        padding: 5px 10px;
+      }
+
+      .study-flashcard {
+        width: 35%;
+        height: 70vh;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .statistics {
+        padding: 15px 15px;
+        font-family: sans-serif;
+      }
+      .total-card {
+        width: 200px;
+        height: 12vh;
+        margin: 25px auto;
+        border-radius: 10px;
+        border: 1px solid black;
+        display: flex;
+        gap: 80px;
+      }
+      .total {
+        padding: 5px;
+      }
+      .total h2 {
+        padding-top: 10px;
+      }
+      .cards {
+        background-color: rgba(87, 79, 207, 0.66);
+        width: 70px;
+        border-left: 1px solid black;
+        border-radius: 0px 10px 10px 0px;
+        text-align: center;
+        padding-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero-section">
+        <div class="navbar">
+          <h2 class="nav-heading">Flashcard</h2>
+          <div class="nav-container">
+            <button class="Study">Study Mode</button>
+            <p class="nav-card">All Cards</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="flashcard-container">
+            <div class="header">
+              <article class="left-header">
+                <select name="category" id="" style="border: none">
+                  <option value="">All Categories</option>
+                  <option value="">HTML</option>
+                  <option value="">CSS</option>
+                  <option value="">JavaScript</option>
+                </select>
+              </article>
+              <article class="checkbox">
+                <input type="checkbox" />
+                <label for="hide">Hide Mastered</label>
+              </article>
+              <article class="right-header">
+                <p>Shuffle</p>
+              </article>
+            </div>
+            <br />
+            <hr />
+            <br />
+            <div class="">
+              <div class="main-flascard">
+                <span class="web">Web Development</span>
+                <h2>What does HTML stand for?</h2>
+                <p>Click to reveal answer</p>
+              </div>
+              <div class="action">
+                <span class="know">I Know This</span>
+                <span class="reset">Reset Progress</span>
+              </div>
+            </div>
+            <br />
+            <hr />
+            <div class="footer">
+              <div class="previos">Previous</div>
+              <p>Card 1 of 40</p>
+              <div class="next">Next</div>
+            </div>
+          </div>
+          <div class="study-flashcard">
+            <h3 class="statistics">Study Statistics</h3>
+            <div class="total-card">
+              <div class="total">
+                <p>Total Cards</p>
+                <h2>11</h2>
+              </div>
+              <div class="cards">&copy;</div>
+            </div>
+            <div class="total-card">
+              <div class="total">
+                <p>Mastered</p>
+                <h2>11</h2>
+              </div>
+              <div
+                class="cards"
+                style="
+                  background-color: rgba(13, 222, 135, 0.945);
+                "
+              >
+                &copy;
+              </div>
+            </div>
+            <div class="total-card">
+              <div class="total">
+                <p>In Progress</p>
+                <h2>21</h2>
+              </div>
+              <div class="cards" style="background-color: red">&copy;</div>
+            </div>
+            <div class="total-card">
+              <div class="total">
+                <p>Not Started</p>
+                <h2>8</h2>
+              </div>
+              <div
+                class="cards"
+                style="background-color: rgba(240, 32, 67, 0.796)"
+              >
+                &copy;
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

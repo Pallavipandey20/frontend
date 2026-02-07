@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Practice Prompt and Update document content</h1>
+    <h2 class="heading1" id="heading1">Main heading</h2>
+    <h2 class="heading2" id="heading2">heading second</h2>
+    <h2 class="heading3" id="heading3">Main heading</h2>
+    <p>Hi</p>
+    <h3>Marks</h3>
+    <script>
+      // using tag
+      document.querySelector("h2").textContent = "Hello";
+      // using id
+      document.querySelector("#heading3").textContent = "Hello world";
+      // using class
+      document.querySelector(".heading2").textContent = "Hello! Pallavi";
+
+      //   prompt
+      //   let userInput = prompt("enter your name");
+      //   document.querySelector("p").textContent = userInput;
+
+      let Marks = Number(prompt("Enter your marks% : "));
+      if (Marks >= 33) {
+        document.querySelector("h3").textContent =
+          "You are eligible for next class";
+      } else {
+        document.querySelector("h3").textContent =
+          "You are not eligible for next class";
+      }
+    </script>
+  </body>
+</html>

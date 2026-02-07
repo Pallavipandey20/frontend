@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+      }
+
+      body {
+        font-family: sans-serif;
+        /* line-height: 1.6; */
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Oswald", sans-serif;
+      }
+      /* hero section */
+      .hero-section {
+        background-color: rgba(0, 0, 0, 0.619);
+        border: 1px solid black;
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(99, 97, 97),
+          rgb(56, 57, 63)
+        );
+        background-image: url(https://media.istockphoto.com/id/1917151136/photo/order-online-concept-with-character-can-use-for-web-banner-infographics-hero-images-3d.webp?a=1&b=1&s=612x612&w=0&k=20&c=9TRw9MlOXBNRD7SRhBkjJhooEBqzyHvW8D6zhdPrCjM=);
+        /* padding: 3rem 0rem; */
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: cover;
+        background-position: center center;
+        background-blend-mode: overlay;
+      }
+      .hero-content {
+        /* border: 1px solid red; */
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-content h1 {
+        color: white;
+        font-size: 3.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .hero-content p {
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .hero-content a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.2rem;
+        background-color: blueviolet;
+        color: #eee;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+      }
+
+      /* FEATURED SECTION */
+       {
+        .featured {
+          padding: 3rem 1rem;
+          text-align: center;
+        }
+        .products {
+          /* min-height: 80vh; */
+          display: flex;
+          gap: 1.5rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 2rem;
+        }
+        .card {
+          border: 2px solid black;
+          width: 25%;
+          border-radius: 10px;
+          padding-bottom: 1rem;
+          overflow: hidden;
+        }
+        .product-img {
+          height: 200px;
+          background-size: cover;
+          background-position: center;
+        }
+        .img-1 {
+          background-image: url(https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvc2V8ZW58MHx8MHx8fDA%3D);
+          /* 
+        width: 250px;
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center center;
+        background-blend-mode: overlay; */
+        }
+        .img-2 {
+          background-image: url(https://images.unsplash.com/photo-1603808033192-082d6919d3e1?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+        .img-3 {
+          background-image: url(https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvc2V8ZW58MHx8MHx8fDA%3D);
+        }
+        .card a {
+          text-decoration: none;
+          display: inline-block;
+          font-size: 1.2rem;
+          background-color: #111;
+          color: #eee;
+          padding: 0.5rem 1rem;
+          border-radius: 8px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .card h2 {
+          margin: 1rem 0 0.5rem;
+        }
+        .price {
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+      }
+
+      /* featured section 2 */
+      .featured-section {
+        padding: 4rem 0rem;
+      }
+
+      .featured-content {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 0.5rem;
+      }
+
+      .section-heading {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+      }
+      .featured-products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        justify-content: center;
+      }
+
+      .featured-product {
+        /* border: 1px solid red; */
+        position: relative;
+        width: 20rem;
+      }
+
+      .product-image-placeholder {
+        /* background-color: black; */
+        background-image: linear-gradient(145deg, black, blue);
+        width: 100%;
+        aspect-ratio: 9/6;
+        margin-bottom: 0.6rem;
+        border-radius: 8px;
+        overflow: hidden;
+        /* parent */
+      }
+
+      .product-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .product-image:hover {
+        opacity: 0.4;
+      }
+      .product-tag {
+        /* font , background, m/p, border, poition, display */
+        color: red;
+        font-size: 0.8rem;
+        background-color: rgb(248, 218, 218);
+
+        padding: 0.2rem;
+        border: 1px solid red;
+        border-radius: 8px;
+        corner-shape: squircle;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+      .product-name {
+        font-size: 1.8rem;
+      }
+      p .product-description {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        width: 1000%;
+      }
+      .product-price {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .add-cart-btn {
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+        border: none;
+        border-radius: 8px;
+        corner-shape: squircle;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Smart Shopping Starts Here</h1>
+          <p>
+            A user-friendly e-commerce platform designed for smart, safe, and
+            convenient online shopping.
+          </p>
+          <a href="#" class="cta-btn btn">Show now!</a>
+        </div>
+      </section>
+
+      <!-- <section class="featured">
+        <h2>featured Products</h2>
+        <div class="products">
+          <article class="card">
+            <div class="product-img img-1"></div>
+            <h2>Shose 1</h2>
+            <p class="price">19,000</p>
+            <a href="#" class="btn">Add to cart</a>
+          </article>
+          <article class="card">
+            <div class="product-img img-2"></div>
+            <h2>Shose 2</h2>
+            <p class="price">19,000</p>
+            <a href="#" class="btn">Add to cart</a>
+          </article>
+          <article class="card">
+            <div class="product-img img-3"></div>
+            <h2>Shose 3</h2>
+            <p class="price">19,000</p>
+            <a href="#" class="btn">Add to cart</a>
+          </article>
+        </div>
+      </section> -->
+
+      <section class="featured-section">
+        <div class="featured-content">
+          <h2 class="section-heading">Featured Products</h2>
+          <div class="featured-products">
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXBob25lfGVufDB8fDB8fHww"
+                  alt=""
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Iphonen 17 Pro Max</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>₹ 1,81,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1585790051609-09928c362a42?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXBhZHN8ZW58MHx8MHx8fDA%3D"
+                  alt="Ipad"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Ipad</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>81,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="mac"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Macbook</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>₹ 1,81,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1663314326676-5e71b13ee62f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwcGxlJTIwaXBob25lfGVufDB8fDB8fHww"
+                  alt="appleIphone"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Apple iphone</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>₹ 1,20,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdhZGdldHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="Earphone"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Earphone</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>₹ 8,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1614108831136-a6bba175a08e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="camera"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Nikon Camera</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>₹ 48,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+            <article class="featured-product">
+              <div class="product-image-placeholder">
+                <img
+                  src="https://images.unsplash.com/photo-1737355096420-da27436b1671?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGhhcnxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="thar"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-details">
+                <div class="product-tag">&#128293; Trending</div>
+                <h4 class="product-name">Thar</h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
+                  asperiores illo molestias sed vero odio?
+                </p>
+                <p>₹ 12,00,000</p>
+              </div>
+              <div class="product-footer">
+                <button class="btn add-cart-btn">Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

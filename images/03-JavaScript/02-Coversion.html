@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="heading">type conversion vs type coercion</h1>
+    <ul>
+      <li>conversion</li>
+      <li>Coercion</li>
+      <li>Logical Operator</li>
+    </ul>
+    <script>
+      // type conversion vs type coercion
+      let age = 18;
+      console.log(age);
+      console.log(String(age));
+      console.log(String(22));
+
+      console.log(Number("45"));
+      console.log(Boolean(-22));
+      console.log(Number("6a"));
+      console.log(typeof NaN);
+      // type of NaN is number but it is a invalid number
+
+      // type coercion
+      console.log("Hello I am " + 23 + " years old.");
+      if (10) {
+        console.log("Hello");
+      }
+      //   Truthy & Falsy value
+      // 0, "", undefined, null, NaN
+
+      console.log(Boolean(0));
+      console.log(Boolean(null));
+      console.log(Boolean(undefined));
+      console.log(Boolean(""));
+      console.log(Boolean(NaN));
+
+      //   == vs ===
+      let Age = "18";
+      // check value
+      if (Age == 18) {
+        console.log("You just become 18. LooSely");
+      }
+      // value as well as data type
+      if (Age === 18) {
+        console.log("You just become 18.Strictly");
+      }
+
+      // logical operators
+      // the truth table
+      // A     B      A && B  A||B  !A
+      // T     T        T      T     F
+      // T     F        F      T     F
+      // F     T        F      T     T
+      // F     F        F      F     T
+
+      // for three condition
+      // T && T && T => T
+      // T && F && T => F
+      // T || F || T => T
+
+      // the power of && is greater then is 4 and more then || oprator so solve this first so solve theis first and then left-to-right
+
+      //   let userInput = Number(prompt("What is your age?"));
+      //   console.log(userInput);   //allow only num
+      //   let userInput = prompt("What is your age?");
+      //   console.log(userInput);
+
+      //   if (userInput >= 18) {
+      //     document.querySelector(".heading").textContent =
+      //       "You can do what do you want";
+      //   } else if (userInput < 18) {
+      //     document.querySelector(".heading").textContent = "You cannot vote";
+      //   }
+      let hasDriversLicense = true; // A
+      let hasgoodVision = true; //B
+
+      //   if (hasDriversLicense && hasgoodVision) {
+      //     console.log("you can drive my car");
+      //   } else {
+      //     console.log("you can not drive my car");
+      //   }
+      //   let isTired = true; //c
+      let isTired = false; //c
+
+      if (hasDriversLicense && hasgoodVision && !isTired) {
+        console.log("you can drive my car");
+      } else {
+        console.log("you can not drive my car");
+      }
+    </script>
+  </body>
+</html>

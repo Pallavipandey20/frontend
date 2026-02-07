@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* text-align: center; */
+        color: rgba(255, 255, 255, 0.726);
+        font-family: "Inter", sans-serif;
+      }
+      .container {
+        margin: auto;
+        width: 1080px;
+        /* height: 1161px; */
+        background-color: #02002c;
+        display: grid;
+        grid-template-areas:
+          "navbar navbar navbar"
+          "main main sidebar";
+        position: relative;
+      }
+
+      .header {
+        grid-area: navbar;
+        padding: 2rem;
+        background-color: #02002c;
+        /* padding: 30px auto; */
+        text-align: center;
+      }
+      .navbar p {
+        color: white;
+        font-weight: 500;
+        font-size: 2.2rem;
+        margin: 20px auto;
+      }
+      .search-box {
+        background-color: #47586b65;
+        padding: 10px 20px;
+        width: 316px;
+        border: 1px solid #47586b65;
+        border-radius: 10px;
+      }
+      .btn {
+        background-color: rgb(53, 0, 128);
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: 1px solid blue;
+      }
+      .main {
+        grid-area: main;
+      }
+      .main .main-1 {
+        display: flex;
+        gap: 250px;
+        align-items: center;
+        padding: 2rem;
+        background-image: linear-gradient(
+          to right,
+          rgb(93, 93, 240),
+          rgb(53, 0, 128)
+        );
+        width: 625px;
+        height: 225px;
+        border-radius: 10px;
+        margin: 20px 15px 10px 40px;
+      }
+      .main-1 h2 {
+        font-size: 60px;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .main-2 {
+        display: flex;
+        margin: 20px 0px 30px 30px;
+      }
+      .main-3 {
+        display: flex;
+        margin: 20px 0px 0px 30px;
+      }
+
+      .box {
+        border: 1px solid gray;
+        width: 140px;
+        height: 90px;
+        border-radius: 10px;
+        background-color: #1e146688;
+        margin: 10px;
+        padding: 1rem;
+        background-color: rgba(128, 128, 128, 0.188);
+      }
+      .box-2 {
+        border: 1px solid gray;
+        width: 80px;
+        height: 160px;
+        border-radius: 10px;
+        background-color: #1e146688;
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgba(128, 128, 128, 0.188);
+      }
+      .box p {
+        padding-bottom: 15px;
+        color: rgba(255, 255, 255, 0.768);
+      }
+      .div {
+        grid-area: div;
+        padding: 2rem;
+        background-color: #002c0a;
+        width: 181px;
+        height: 20px;
+        margin-top: 0px;
+      }
+      /* .header */
+      .image {
+        color: rgb(216, 99, 20);
+        color: blueviolet;
+        fill: orange;
+        /* filter: brightness(0) invert(1); */
+        /* background-color: red; */
+      }
+      img {
+        filter: brightness(0) invert(1);
+      }
+      .aside {
+        grid-area: sidebar;
+        padding: 2rem;
+        background-color: lightblue;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: #47586b65;
+        width: 350px;
+        height: 600px;
+      }
+      .heading {
+        font-size: 1rem;
+        font-size: 0.8rem;
+        display: flex;
+        gap: 30px;
+      }
+      .day {
+        background-color: #1e146688;
+        padding: 1px 10px;
+        border-radius: 5px;
+        border: 1px solid #1e1466;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.666);
+      }
+      .time {
+        display: flex;
+        gap: 120px;
+        padding: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.27);
+        background-color: rgba(128, 128, 128, 0.188);
+        margin: 5px auto;
+        border-radius: 10px;
+      }
+      .time span {
+        display: flex;
+      }
+      .time p {
+        padding: 10px;
+        font-size: 1rem;
+      }
+
+      .title {
+        display: flex;
+        /* gap: 900px; */
+        padding: 1rem;
+      }
+      .units {
+        border: 1px solid #47586b65;
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        background-color: #47586b65;
+        position: absolute;
+        top: 3rem;
+        right: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <img src="./images/sun.svg" alt="" class="image" />
+          <h3>Weather Now</h3>
+          <div class="units">
+            <img
+              src="./images/settings.svg"
+              alt="settings"
+              style="height: 1rem"
+            />
+            Units
+            <select style="background-color: #47586b65; border: none"></select>
+          </div>
+        </div>
+
+        <div class="navbar">
+          <p>How's the sky looking today?</p>
+          <input
+            type="text"
+            placeholder="Search for a place..."
+            class="search-box"
+          />
+          <button class="btn">Search</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main-1">
+          <div class="berlin">
+            <p style="color: white; font-size: 1.5rem; padding-bottom: 10px">
+              Berlin, Germany
+            </p>
+            <p style="font-size: 0.8rem">Tuesday, Aug 5, 2025</p>
+          </div>
+          <h2 style="color: white">20&deg;</h2>
+        </div>
+        <div class="main-2">
+          <div class="box">
+            <p>Feels like</p>
+            <p>18&deg;</p>
+          </div>
+          <div class="box">
+            <p>Humidity</p>
+            <p>46%</p>
+          </div>
+          <div class="box">
+            <p>Wind</p>
+            <p>14 km/h</p>
+          </div>
+          <div class="box">
+            <p>Precipitation</p>
+            <p>0 mm</p>
+          </div>
+        </div>
+        <p style="padding-left: 40px; font-size: 1.2rem">Daily forecast</p>
+        <div class="main-3">
+          <div class="box-2">
+            <p>Tue</p>
+            <img
+              src="./images/cloud-rain.svg"
+              alt="rain"
+              style="padding: 35px 0"
+            />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>20&deg;</span>
+              <span>14&deg;</span>
+            </div>
+          </div>
+          <div class="box-2">
+            <p>Wed</p>
+            <img
+              src="./images/cloud-drizzle.svg"
+              alt="rain"
+              style="padding: 35px 0"
+            />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>21&deg;</span>
+              <span>15&deg;</span>
+            </div>
+          </div>
+          <div class="box-2">
+            <p>Thu</p>
+            <img src="./images/sun.svg" alt="sun" style="padding: 35px 0" />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>24&deg;</span>
+              <span>14&deg;</span>
+            </div>
+          </div>
+          <div class="box-2">
+            <p>Tue</p>
+            <img
+              src="./images/cloud-sun.svg"
+              alt="rain"
+              style="padding: 35px 0"
+            />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>25&deg;</span>
+              <span>13&deg;</span>
+            </div>
+          </div>
+          <div class="box-2">
+            <p>Sat</p>
+            <img
+              src="./images/cloud-lightning.svg"
+              alt="rain"
+              style="padding: 35px 0"
+            />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>21&deg;</span>
+              <span>15&deg;</span>
+            </div>
+          </div>
+          <div class="box-2">
+            <p>Sun</p>
+            <img
+              src="./images/cloud-drizzle.svg"
+              alt="rain"
+              style="padding: 35px 0"
+            />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>25&deg;</span>
+              <span>16&deg;</span>
+            </div>
+          </div>
+          <div class="box-2">
+            <p>Mon</p>
+            <img src="./images/waves.svg" alt="rain" style="padding: 35px 0" />
+            <div class="temp" style="display: flex; gap: 10px">
+              <span>20&deg;</span>
+              <span>14&deg;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aside">
+        <div class="heading">
+          <h3>Hourly forecast</h3>
+          <span>
+            <select name="day" id="day" class="day">
+              <option value="mon">Monday</option>
+              <option value="tue" selected>Tuesday</option>
+              <option value="wed">Wednesday</option>
+              <option value="thu">Thursday</option>
+              <option value="fri">Friday</option>
+              <option value="sat">Saturday</option>
+              <option value="sun">Sunday</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="time">
+          <span>
+            <img src="./images/cloud.svg" alt="cloud" />
+            <p>3 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/cloud.svg" alt="cloud" />
+            <p>4 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/cloud.svg" alt="cloud" />
+            <p>5 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/cloud-sun.svg" alt="cloud" />
+            <p>6 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/sun.svg" alt="cloud" />
+            <p>7 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/cloud-rain.svg" alt="cloud" />
+            <p>8 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/waves.svg" alt="cloud" />
+            <p>9 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+        <div class="time">
+          <span>
+            <img src="./images/cloud-rain.svg" alt="cloud" />
+            <p>10 PM</p>
+          </span>
+          <p>20&deg;</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

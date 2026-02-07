@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+
+    <script>
+      //objects
+      let rahul = ["Rahul", "sharma", "1997", "Developer", ["Rahul", "Harsh"]];
+
+      let rahulObj = {
+        firstName: "Rahul",
+        lastName: "Sharma",
+        birthDate: "1991",
+        job: "Developer",
+        friends: ["Rahul", "Harsh", "Raman"],
+      };
+      console.log(rahulObj);
+
+      // access
+      // dot notation and bracket notation
+      console.log(rahulObj.firstName);
+      console.log(rahulObj.birthDate);
+
+      //   bracket notation
+      console.log(rahulObj["job"]);
+      let key = "Name";
+      console.log(rahulObj["first" + key]);
+      console.log(rahulObj["last" + key]);
+
+      rahulObj.address = "Delhi";
+
+      // element add
+      console.log(rahulObj);
+
+      //   method
+
+      let rakeshObj = {
+        firstName: "rakesh",
+        lastName: "Sharma",
+        birthYear: "1991",
+        job: "Developer",
+        friends: ["Rakesh", "Harsh", "Raman"],
+
+        // functionalities
+        calsAge1: function () {
+          const age = 2026 - this.birthYear;
+          return age;
+        },
+
+        calsAge2: function () {
+          this.age = 2026 - this.birthYear;
+          return this.age;
+        },
+      };
+
+      //   console.log(rakeshObj.calsAge1());
+      console.log(rakeshObj["calsAge1"]());
+      console.log(rakeshObj.calsAge2());
+      console.log(rakeshObj.calsAge2());
+      console.log(rakeshObj.age);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array</h1>
+    <script>
+      // array
+      let friends = ["pallavi", "radha", "siya", "raman"];
+
+      // access
+      console.log(friends[2]);
+
+      friends[2] = "Rakesh";
+
+      // add
+      // push():  Appends new elements to the ends of the array
+      console.log(friends.push("Naman"));
+
+      // unshift(): insert new element at the start of an array
+      friends.unshift("guyg");
+
+      // remove
+      // pop
+
+      let arr = [
+        "Rahul",
+        12,
+        true,
+        undefined,
+        null,
+        [1, 2, 3, 4],
+        "Ramu",
+        true,
+      ];
+      console.log(arr[5][1]);
+      console.log(arr.includes("Rahul"));
+      console.log(arr.indexOf("Rahul"));
+      console.log(arr.indexOf("siya"));
+
+      console.log(arr[6]);
+      console.log(arr.length);
+      console.log(arr[arr.length - 1]);
+      console.log(arr.concat[(100, 200, 300, 400)]);
+
+      //   function declaration expression and arrow function
+
+      // declaration(hosting)
+      function calcAge1(birthYear) {
+        return 2026 - birthYear;
+      }
+      let age1 = calcAge1(1997);
+      // expression
+      const calcAge2 = function (birthYear) {
+        return 2026 - birthYear;
+      };
+      let age2 = calcAge2(1997);
+
+      // arrow function
+      const calcAge3 = (birthYear) => 2026 - birthYear;
+      let age3 = calcAge3(1997);
+
+      //  variable me hosting hoti hai jo var keyword se initilise hote hai
+
+      let fName = "radha";
+      console.log(fName);
+      // var hosting ko support karta hai
+      // hosting function aur variable ke code ko starting ,me lekar chla jata hai is liye isko decration ke pahle bhi use kar sakte hai
+      var firstName = "Shyam";
+      console.log(firstName);
+
+      // expression
+      let years = [1991, 1985, 1964, 1938];
+      const calsAge = (year) => 2026 - year;
+      let ages = [
+        calsAge(years[0]),
+        calsAge(years[1]),
+        calsAge(years[2]),
+        calsAge(years[3]),
+        calsAge(years[4]),
+      ];
+      console.log(years);
+      console.log(ages);
+    </script>
+  </body>
+</html>

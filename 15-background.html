@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 3rem;
+        font-family: system-ui, sans-serif;
+      }
+      .div-1 {
+        padding: 100px;
+        background-color: rgb(0, 255, 21);
+        color: white;
+
+        background-image: linear-gradient(red, black);
+        background-image: linear-gradient(to right, red, black);
+        background-image: linear-gradient(to top, red, black);
+        background-image: linear-gradient(45deg, red, black);
+        background-image: linear-gradient(45deg, red, black, blueviolet);
+        /* background-image: linear-gradient(red, black); */
+      }
+      .div-2 {
+        padding: 100px;
+        color: white;
+        background-image: radial-gradient(red, black);
+        background-image: radial-gradient(circle, red, black);
+      }
+      .div-3 {
+        padding: 100px;
+        color: white;
+        background-image: conic-gradient(black, blueviolet);
+        background-image: conic-gradient(from 90deg, black, blueviolet);
+      }
+      .div-4 {
+        padding: 300px 100px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.453);
+        background-image: url(https://media.istockphoto.com/id/1423855918/photo/christmas-background-christmas-tree-and-magical-blurred-bokeh-lights-in-the-background-soft.webp?a=1&b=1&s=612x612&w=0&k=20&c=NwBHgNVLPw_vbnhFOWFBsQ3VHR2JZA834HHKa0dYEWk=);
+        background-size: 300px;
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+        background-repeat: no-repeat;
+
+        background-position: top right;
+        background-position: bottom center;
+        background-position: center center;
+
+        background-size: 100%;
+        background-size: contain;
+        background-size: cover;
+        /* background color ki opacity ko main tain karne se show krega */
+        background-blend-mode: overlay;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-4">
+      <h1>Background</h1>
+    </div>
+    <div class="div-1">
+      <h1>Background</h1>
+    </div>
+    <div class="div-2">
+      <h1>Background</h1>
+    </div>
+    <div class="div-3">
+      <h1>Background</h1>
+    </div>
+  </body>
+</html>

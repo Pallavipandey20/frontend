@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image</title>
+  </head>
+  <body>
+    <h1>Image in html</h1>
+    <ul>
+      <li>img tag (self closing)</li>
+      <li>to add sourse of the image we use "srs" attribute</li>
+      <li>we can get free to use image from unsplash.com</li>
+      <li>"alt" attribute provides alternate to adjust size of the image</li>
+      <li>use 'width' & "height" attributes to adjust size of the image</li>
+    </ul>
+    <img
+      src="https://images.unsplash.com/photo-1765249456442-f51badd803b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+      alt="tree img"
+      width="250px"
+    />
+    <img src="./images/tablechair.png" alt="" width="250px" />
+    <br />
+    <picture>
+      <source srcset="./images/dinning.png" media="(max-width:600px)" />
+      <source srcset="./images/tablechair.png" media="(max-width:750px)" />
+      <img src="./table.png" alt="" />
+    </picture>
+  </body>
+</html>

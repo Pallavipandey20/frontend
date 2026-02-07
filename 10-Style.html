@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      /* 
+      * {
+        color: red;
+      } */
+      /* element selector */
+      h2 {
+        color: blue;
+        font-size: 25px;
+      }
+      /* class selector */
+      .red {
+        background-color: antiquewhite;
+      }
+      /* id selector */
+      #blue {
+        color: royalblue;
+      }
+      .main-heading {
+        font-size: 60px;
+      }
+      span,
+      li.red {
+        background-color: blueviolet;
+      }
+      div span {
+        color: brown;
+      }
+      /* sodo class */
+      li:hover {
+        background-color: blue;
+      }
+
+      button {
+        font-size: 30px;
+      }
+      button:active {
+        color: red;
+      }
+      input:focus {
+        border-color: blueviolet;
+      }
+    </style>
+    <link rel="stylesheet" href="10-style.css" />
+  </head>
+  <body class="red">
+    <!-- inline css -->
+    <h1
+      style="color: red; background-color: blueviolet"
+      class="green main-heading"
+    >
+      Introduction to css
+    </h1>
+    <h1>second heading</h1>
+
+    <h2>This will show you how to add internal css.</h2>
+    <h2>Second heading two</h2>
+    <ul>
+      <li id="blue">Item1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <h1>heading</h1>
+    <p>THis is pragraph</p>
+    <span>THis is span</span>
+
+    <div>
+      <span>this is span2</span>
+    </div>
+
+    <div>
+      <b><span>span3</span></b>
+    </div>
+
+    <button>click me</button>
+    <input type="text" name="" id="" placeholder="enter name" />
+  </body>
+</html>

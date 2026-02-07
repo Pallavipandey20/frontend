@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Loops</h1>
+    <p>For loop</p>
+    <script>
+      // loops
+
+      // for loop
+      for (let i = 1; i <= 10; i++) {
+        console.log("helloWorls" + i);
+      }
+      // Working
+      // let i = 1; TRUE; BLOCK; i++
+      // i = 2; TRUE; BLOCK; i++
+      // i = 3; TRUE; BLOCK; i++
+      // ....
+      // i = 9; TRUE; BLOCK; i++
+      // i = 10; TRUE; BLOCK; i++
+      // i = 11; FALSE; EXIT
+
+      for (let i = 1; false; i++) {
+        console.log("Hello world " + 1);
+      }
+
+      let a = 1;
+      for (; a <= 10; ) {
+        console.log("HelloWorls " + a);
+        a++;
+      }
+
+      let rahul = [
+        "Rahul",
+        "Sharma",
+        1991,
+        "Developer",
+        ["Rahul", "Harsh", "Vishal", "Nitin"],
+      ];
+      for (let i = 0; i <= rahul.length - 1; i++) {
+        console.log(rahul[i]);
+      }
+      //
+      for (let i = 5; i >= 1; i--) {
+        console.log(i);
+      }
+
+      // let friends = ["Rahul", "Aman", "tanmay"];
+      // const namesDiv = document.querySelector(".names");
+      // for (let i = 0; i < friends.length; i++) {
+      //   let nameHeading = document.createElement("h3");
+      //   nameHeading.textContent = friends[i];
+      //   nameHeading.appendChild(nameHeading);
+      //   // console.log(nameHeading);
+      // }
+
+      // while loop
+      let x = 1;
+      while (x <= 5) {
+        console.log("Hello " + x);
+        x++;
+      }
+      // to genrate random numbers between 1 to 6
+      // roll dice
+      let dice = Math.trunc(Math.random() * 6 + 1);
+      // check if dice is not equal to 6
+      while (dice != 6) {
+        console.log(dice);
+        // roll dice
+        dice = Math.trunc(Math.random() * 6 + 1);
+      }
+      // exit if dice is equal to 6
+      console.log("Dice = " + dice);
+
+      // for(let di)
+    </script>
+  </body>
+</html>

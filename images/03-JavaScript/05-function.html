@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Function</h1>
+
+    <script>
+      // funtion
+      // block of code that we can reduce
+
+      // function accept parameters (creating time)
+
+      // by default function call produces undefined
+      console.log("add");
+      function add(a, b) {
+        return a + b;
+      }
+      // call/run/invoke (is same)
+      // provideing argument to function(on calling time)
+      console.log("Add is " + add(10, 20));
+
+      // sub
+      function sub(a, b) {
+        return a - b;
+      }
+      console.log("Sub is " + sub(20, 10));
+
+      // multiplication
+      function mul(a, b) {
+        return a * b;
+      }
+      console.log("Mul is " + mul(10, 20));
+
+      // division
+      //   function div(a, b) {
+      //     return a / b;
+      //   }
+      console.log("div is " + div(8, 2));
+      function div(a, b) {
+        return a / b;
+      }
+      console.log("div is " + div(8, 2));
+
+      //   function calling other function
+      function cutPieces(fruit) {
+        return fruit * 4;
+      }
+      function fruitProcessor(apples, orange) {
+        let applePieces = cutPieces(apples);
+        let orangePieces = cutPieces(orange);
+        return `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of orage.`;
+      }
+      let appleJuice = fruitProcessor(4, 0);
+      let orangeJuice = fruitProcessor(4, 0);
+      console.log(appleJuice);
+      console.log(orangeJuice);
+    </script>
+  </body>
+</html>

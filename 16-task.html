@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block preview card</title>
+    <style>
+      body {
+        background-color: hsl(47, 88%, 63%);
+        font-family: "Figtree", sans-serif;
+        padding: 100px 0px;
+      }
+      .card {
+        background-color: hsl(0, 0%, 100%);
+        padding: 1rem;
+        width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        corner-shape: squircle;
+        border: 1px solid black;
+        box-shadow: 8px 8px black;
+      }
+      .card-img-container {
+        margin-bottom: 1rem;
+      }
+      .card-img {
+        border-radius: 8px;
+        corner-shape: squircle;
+        width: 100%;
+      }
+      .card-tag {
+        font-weight: 700;
+        background-color: hsl(47, 88%, 65%);
+        display: inline-block;
+        padding: 8px 6px;
+        font-size: 14px;
+        border-radius: 4px;
+        corner-shape: squircle;
+      }
+      .card-content {
+        color: hsl(0, 0%, 42%);
+      }
+      .user-image {
+        width: 40px;
+        display: inline-block;
+      }
+      .user-name {
+        display: inline-block;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <div class="card-img-container">
+          <img src="/images/blog.png" alt="" class="card-img" />
+        </div>
+        <div class="card-text-container">
+          <div class="card-tag">Learning</div>
+          <p class="date">Published 21 Dec 2023</p>
+          <h2 class="card-heading">HTML & CSS font</h2>
+          <p class="card-content">
+            These language are the backbone of structure,content, and
+            presentation
+          </p>
+          <div class="card-user-info">
+            <div class="user-profile">
+              <img src="images/avtar-1.png" alt="user-image" />
+
+              <h4 class="user-name">Grey Hooper</h4>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
